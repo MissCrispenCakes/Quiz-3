@@ -1,15 +1,15 @@
 window.onload = () => {
-     let places = staticLoadPlaces();
-     renderPlaces(places);
+     let places = staticLoadPlaces(); //sets places using staticLoadPlaces() function
+     renderPlaces(places); //runs renderPlaces function by sending "places"
 };
 
-function staticLoadPlaces() {
+function staticLoadPlaces() { // a function that loads a place based on longitude and latitude
     return [
         {
-            name: 'MyModel',
+            name: 'MyModel', // sets model name
             location: {
-                lat: <your-latitude>,
-                lng: <your-longitude>,
+                lat: <your-latitude> //</your-latitude>, //Gets your latitude
+                lng: <your-longitude>//</your-longitude> //Gets your longitude
             }
         },
     ];
@@ -19,8 +19,8 @@ function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
 
     places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+        let latitude = place.location.lat; //sets latitude
+        let longitude = place.location.lng; //sets longitude
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);

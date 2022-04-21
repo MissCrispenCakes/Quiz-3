@@ -1,4 +1,4 @@
-window.onload = () => {
+window.onload = () => { // triggers render function when window is loaded
   render();
 };
 
