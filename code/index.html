@@ -22,9 +22,16 @@
 		
 		<!-- we dont have camera, assets, items, etc. in here yet -->
 		
-		<a-box color="yellow" gps-entity-place="latitude: 43.60064652889135; longitude: -79.57655885168217"/>
+		<!-- <a-box color="yellow" gps-entity-place="latitude: 43.60064652889135; longitude: -79.57655885168217"/> -->
 		
 		<a-camera gps-camera rotation-reader simulateLatitude: 43.599160305857964; simulateLongitude: -79.57713863995566' rotation-reader></a-camera>
+
+		<a-assets>
+			<a-asset-item id="hovercar-obj" src="/code/hovercar/hovercar.obj"></a-asset-item>
+			<a-asset-item id="hovercar-mtl" src="/code/hovercar/hovercar.mtl"></a-asset-item>
+		</a-assets>
+		
+		<a-entity obj-model="obj: #hovercar-obj; mtl: #hovercar-mtl"></a-entity>
 		
 
 		</a-scene>
