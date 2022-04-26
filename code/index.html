@@ -26,12 +26,11 @@
 		
 		<a-camera gps-camera rotation-reader simulateLatitude: 43.599160305857964; simulateLongitude: -79.57713863995566' rotation-reader></a-camera>
 
-		<a-assets>
-			<a-asset-item id="hovercar-obj" src="/code/hovercar/hovercar.obj"></a-asset-item>
-			<a-asset-item id="hovercar-mtl" src="/code/hovercar/hovercar.mtl"></a-asset-item>
-		</a-assets>
-		
-		<a-entity obj-model="obj: #hovercar-obj; mtl: #hovercar-mtl"></a-entity>
+		<a-entity gltf-model="./code/car/hovercar.gltf"
+				rotation="0 90 0" scale="0.05 0.05 0.05"
+				gps-entity-place="longitude: -78.99470; latitude: 43.83610;"
+				animation-mixer>
+		</a-entity>
 		
 
 		</a-scene>
